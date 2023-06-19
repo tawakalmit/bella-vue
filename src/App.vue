@@ -1,15 +1,18 @@
-<script setup>
-
-</script>
-
 <template>
-  <main>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </main>
+  <div id="bella-app">
+    <Navbar />
+    <router-view></router-view>
+  </div>
 </template>
 
-<style scoped>
 
-</style>
+<script>
+import Navbar from './components/Navbar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Navbar
+  }
+}
+</script>
