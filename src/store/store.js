@@ -51,6 +51,46 @@ export default createStore({
             }).catch((err) => {
                 alert(err.response?.data?.message)
             })
+        },
+        getHomeBannersData ({commit}) {
+            axios.get('http://127.0.0.1:8000/api/homebanner')
+            .then(res => {
+                commit('SET_HOMEBANNER_DATA', res.data)
+            }).catch((err) => {
+                alert(err.response?.data?.message)
+            })
+        },
+        getNewArrivalData ({commit}) {
+            axios.get('http://127.0.0.1:8000/api/new_arrival')
+            .then(res => {
+                commit('SET_NEWARRIVAL_DATA', res.data)
+            }).catch((err) => {
+                alert(err.response?.data?.message)
+            })
+        },
+        getProductCategoriesData ({commit}) {
+            axios.get('http://127.0.0.1:8000/api/product_category')
+            .then(res => {
+                commit('SET_PRODUCTCATEGORIES_DATA', res.data)
+            }).catch((err) => {
+                alert(err.response?.data?.message)
+            })
+        },
+        getTestimoniesData ({commit}) {
+            axios.get('http://127.0.0.1:8000/api/testimony')
+            .then(res => {
+                commit('SET_TESTIMONIES_DATA', res.data)
+            }).catch((err) => {
+                alert(err.response?.data?.message)
+            })
+        },
+        getPostsData ({commit}) {
+            axios.get('http://127.0.0.1:8000/api/posts')
+            .then(res => {
+                commit('SET_POSTS_DATA', res.data)
+            }).catch((err) => {
+                alert(err.response?.data?.message)
+            })
         }
     }
 })

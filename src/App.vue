@@ -1,18 +1,21 @@
 <template>
   <div id="bella-app">
     <Navbar />
-    <router-view></router-view>
+      <router-view class="min-h-screen"></router-view>
+    <Footer />
   </div>
 </template>
 
 
 <script>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
