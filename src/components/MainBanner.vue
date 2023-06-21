@@ -1,7 +1,9 @@
 <template>
-  <swiper :navigation="true" :modules="modules" class="mySwiper" :autoplay="{delay: 2500, disableOnInteraction: false}">
-    <swiper-slide v-for="homeBanner, key in homeBanners" :key="key"><img :src="getImgPath(homeBanner.image_banner)" alt=""></swiper-slide>
-  </swiper>
+  <section class="mt-[7rem]">
+    <swiper :navigation="true" :modules="modules" class="mySwiper" :autoplay="{delay: 2500, disableOnInteraction: false}">
+      <swiper-slide v-for="homeBanner, key in homeBanners" :key="key"><img :src="getImgPath(homeBanner.image_banner)" alt=""></swiper-slide>
+    </swiper>
+  </section>
 </template>
 
 <script>
