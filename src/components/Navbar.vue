@@ -1,7 +1,7 @@
 <template>
-  <nav class="w-full h-[4rem] lg:h-[7rem] bg-[#f3f3f3] flex items-center justify-center">
+  <nav class="fixed transition-all top-0 z-[999] w-full h-[4rem] lg:h-[7rem] bg-[#f3f3f3] flex items-center justify-center">
     <div class="w-11/12 xl:w-9/12 mx-auto flex items-center justify-between">
-        <router-link to="/"><div class="w-[5rem] lg:w-[9rem]"><img class="w-full h-full object-cover" src="../assets/logo.png" alt="logo" /></div></router-link>
+        <router-link to="/"><div id="mainlogo" class="w-[5rem] lg:w-[9rem] transition-all"><img class="w-full h-full object-cover" src="../assets/logo.png" alt="logo" /></div></router-link>
         <ul class="hidden lg:flex gap-7 text-sm tracking-widest uppercase text-[#3a3f45]">
             <li class="hover:text-[#2e3192]"><router-link to="/">Beranda</router-link></li>
             <li class="hover:text-[#2e3192]"><router-link to="/tentangkami">Tentang Kami</router-link></li>
@@ -32,6 +32,15 @@ export default {
     },
     mounted () {
         this.getFeaturesData()
+        window.addEventListener('scroll', function(){
+            if(window.scrollY > 50){
+                document.querySelector("nav").style.height="4rem"
+                document.querySelector("#mainlogo").style.width="5rem"
+            } else {
+                document.querySelector("nav").style.height="7rem"
+                document.querySelector("#mainlogo").style.width="9rem"
+            }
+        })
     }
 }
 </script>
