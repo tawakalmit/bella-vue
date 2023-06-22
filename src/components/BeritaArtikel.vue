@@ -23,7 +23,7 @@
             <swiper-slide v-for="post, key in posts" :key="key">
                 <router-link :to="'/post/' + post.slug">
                     <CardBerita 
-                    :imgsrc="'http://127.0.0.1:8000/storage/image_headline/'+post.image_headline"
+                    :imgsrc="'http://mitworks.my.id/storage/image_headline/'+post.image_headline"
                     :title="post.title"
                     :exerpt="post.excerpt"
                     />

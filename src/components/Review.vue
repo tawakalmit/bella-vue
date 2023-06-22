@@ -26,7 +26,7 @@
                 :testimony="item.review" 
                 :name="item.name" 
                 :role="item.role" 
-                :imgSrc="'http://127.0.0.1:8000/storage/avatar/'+item.avatar" 
+                :imgSrc="'http://mitworks.my.id/storage/avatar/'+item.avatar" 
                 />
             </swiper-slide>
         </swiper>
