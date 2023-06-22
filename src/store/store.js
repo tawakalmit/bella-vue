@@ -45,7 +45,7 @@ export default createStore({
     },
     actions: {
         getFeaturesData ({commit}) {
-            axios.get('http://mitworks.my.id/api/features')
+            axios.get('https://mitworks.my.id/api/features')
             .then(res => {
                 commit('SET_FEATURES_DATA', res.data)
             }).catch((err) => {
@@ -53,7 +53,7 @@ export default createStore({
             })
         },
         getHomeBannersData ({commit}) {
-            axios.get('http://mitworks.my.id/api/homebanner')
+            axios.get('https://mitworks.my.id/api/homebanner')
             .then(res => {
                 commit('SET_HOMEBANNER_DATA', res.data)
             }).catch((err) => {
@@ -61,7 +61,7 @@ export default createStore({
             })
         },
         getNewArrivalData ({commit}) {
-            axios.get('http://mitworks.my.id/api/new_arrival')
+            axios.get('https://mitworks.my.id/api/new_arrival')
             .then(res => {
                 commit('SET_NEWARRIVAL_DATA', res.data)
             }).catch((err) => {
@@ -69,7 +69,7 @@ export default createStore({
             })
         },
         getProductCategoriesData ({commit}) {
-            axios.get('http://mitworks.my.id/api/product_category')
+            axios.get('https://mitworks.my.id/api/product_category')
             .then(res => {
                 commit('SET_PRODUCTCATEGORIES_DATA', res.data)
             }).catch((err) => {
@@ -77,7 +77,7 @@ export default createStore({
             })
         },
         getTestimoniesData ({commit}) {
-            axios.get('http://mitworks.my.id/api/testimony')
+            axios.get('https://mitworks.my.id/api/testimony')
             .then(res => {
                 commit('SET_TESTIMONIES_DATA', res.data)
             }).catch((err) => {
@@ -85,7 +85,7 @@ export default createStore({
             })
         },
         getPostsData ({commit}) {
-            axios.get('http://mitworks.my.id/api/posts')
+            axios.get('https://mitworks.my.id/api/posts')
             .then(res => {
                 commit('SET_POSTS_DATA', res.data)
             }).catch((err) => {

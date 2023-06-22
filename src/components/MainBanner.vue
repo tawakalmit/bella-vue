@@ -23,7 +23,7 @@
         }),
         getImgPath () {
             return imgPath => {
-                return "http://mitworks.my.id/storage/image_banner/" + imgPath
+                return "https://mitworks.my.id/storage/image_banner/" + imgPath
             }
         }
     },
